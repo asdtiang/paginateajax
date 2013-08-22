@@ -6,6 +6,7 @@ class AjaxPaginateService {
 	def getResultMap(params,classInstance,hql,queryMap) {
 		params.max = Math.min(params.max ? params.int('max') : 10, 100)
 		if(!params.total){
+			
 			params.total=classInstance.executeQuery(hql,queryMap).size()
 		}
 		params.view=params.view==null?"list":params.view

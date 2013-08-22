@@ -1,6 +1,6 @@
 class PaginateAjaxGrailsPlugin {
     // the plugin version
-    def version = "0.1"
+    def version = "0.2"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.2 > *"
     // resources that are excluded from plugin packaging
@@ -10,10 +10,10 @@ class PaginateAjaxGrailsPlugin {
 
     // TODO Fill in these fields
     def title = "Paginateajax Plugin" // Headline display name of the plugin
-    def author = "Your name"
-    def authorEmail = ""
+    def author = "asdtiang"
+    def authorEmail = "asdtiangxia@163.com"
     def description = '''\
-Brief summary/description of the plugin.
+ajax paginate.
 '''
 
     // URL to the plugin's documentation
@@ -22,7 +22,7 @@ Brief summary/description of the plugin.
     // Extra (optional) plugin metadata
 
     // License: one of 'APACHE', 'GPL2', 'GPL3'
-//    def license = "APACHE"
+    def license = "APACHE"
 
     // Details of company behind the plugin (if there is one)
 //    def organization = [ name: "My Company", url: "http://www.my-company.com/" ]
@@ -34,7 +34,7 @@ Brief summary/description of the plugin.
 //    def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
 
     // Online location of the plugin's browseable source code.
-//    def scm = [ url: "http://svn.codehaus.org/grails-plugins/" ]
+    def scm = [ url: "https://github.com/asdtiang/paginateajax" ]
 
     def doWithWebDescriptor = { xml ->
         // TODO Implement additions to web.xml (optional), this event occurs before
