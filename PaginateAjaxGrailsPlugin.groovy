@@ -1,6 +1,6 @@
 class PaginateAjaxGrailsPlugin {
     // the plugin version
-    def version = "0.2"
+    def version = "0.3"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.2 > *"
     // resources that are excluded from plugin packaging
@@ -13,7 +13,7 @@ class PaginateAjaxGrailsPlugin {
     def author = "asdtiang"
     def authorEmail = "asdtiangxia@163.com"
     def description = '''\
-ajax paginate.
+ajax paginate.support jquery
 '''
 
     // URL to the plugin's documentation

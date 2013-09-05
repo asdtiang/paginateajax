@@ -46,7 +46,8 @@
                 </table>
             </div>
             <div class="paginateButtons">
-                <paginate:jquery update="update" total="${dataTotal}" selectMax="15" />
+                <paginate:jquery update="update" sample="true" total="${dataTotal}" selectMax="15" />
+                <paginate:jquery update="update"  total="${dataTotal}" selectMax="15" />
             </div>
         </div>
         </div>
