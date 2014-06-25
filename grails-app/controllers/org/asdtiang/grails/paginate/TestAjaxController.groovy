@@ -9,10 +9,12 @@ class TestAjaxController {
     }
 
     def list = {
-		def hql="""from TestAjax"""
+		def hql=""" from TestAjax where id>:tId"""
+        def countHql = "select count(*) from TestAjax where id>:tId"
+        def map =[tId:2 as Long]
 		params.max = Math.min(params.max ? params.max as int : 5, 100)
 		params.offset=params.offset?params.offset as int:0	
-		ajaxPaginateService.getResultMap(params,TestAjax.class,hql)
+		ajaxPaginateService.genResultMap(params,TestAjax.class,hql,countHql,map)
     }
 
     def create = {
@@ -103,6 +105,7 @@ class TestAjaxController {
 		for(int i=0;i<100;i++){
 			new TestAjax(name:"aaa"+i).save();
 			}
+        TestAjax.executeQuery()
 		new TestAjax(name:"aaaabbbb").save(flush:true);
 		render(view: "addTestData")
 		}

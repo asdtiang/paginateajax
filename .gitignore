@@ -6,3 +6,6 @@ test
 /target
 /target-eclipse
 /plugins
+
+.idea
+/paginateajax-grailsPlugins.iml

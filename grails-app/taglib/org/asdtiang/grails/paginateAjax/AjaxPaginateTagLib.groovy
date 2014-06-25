@@ -72,6 +72,7 @@ class AjaxPaginateTagLib {
 		def lastText=messageSource.getMessage('paginate.last', null, messageSource.getMessage('default.paginate.last', null, 'Last', locale), locale)
         def totalText=messageSource.getMessage('paginate.total', null, messageSource.getMessage('default.paginate.total', null, 'total', locale), locale)
         def showText=messageSource.getMessage('paginate.show', null, messageSource.getMessage('default.paginate.show', null, 'show', locale), locale)
+        def showAllText=messageSource.getMessage('paginate.all', null, messageSource.getMessage('default.paginate.all', null, 'all', locale), locale)
 
 
 
@@ -200,8 +201,10 @@ class AjaxPaginateTagLib {
                def step=attrs.selectStep as int
                for(int i=step;i<=selectMax;i=i+step){
                        writer<<"""<option value ="${i}">${i}</option>"""
-              }
-
+               }
+               if(step>selectMax){
+                   writer<<"""<option value ="${selectMax}">${selectMax}</option>"""
+               }
             }
             else{
               for(int j=1;j<=selectMax;j++){
@@ -213,6 +216,9 @@ class AjaxPaginateTagLib {
                       writer<<"""<option value ="${j}"  selected="selected">${j}</option>"""
                   }
               }
+            }
+            if(attrs.showSelectTotal){
+                writer<<"""<option value ="${total}">${showAllText}</option>"""
             }
             writer<<"</select>"
         }
